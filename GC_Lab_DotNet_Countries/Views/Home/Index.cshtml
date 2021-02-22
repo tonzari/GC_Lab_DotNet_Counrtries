@@ -1,8 +1,22 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model GC_Lab_DotNet_Countries.Models.Country;
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center pb-3">
+    <h1 class="display-4">Fun Lil Country Facts</h1>
+    <p>Please select a country.</p>
 </div>
+
+<form method="post">
+    <select class="form-control">
+    @{ 
+        foreach (Country country in)
+        {
+
+        }
+
+    }
+    </select>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
