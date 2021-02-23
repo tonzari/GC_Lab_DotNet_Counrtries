@@ -16,8 +16,11 @@ namespace GC_Lab_DotNet_Countries.Controllers
 
         public HomeController()
         {
-            Countries = new List<Country>();
 
+        }
+
+        public IActionResult Index()
+        {
             Countries.Add(new Country(
                 "Mexico",
                 new string[] { "Spanish", "Nahuatl" },
@@ -33,22 +36,13 @@ namespace GC_Lab_DotNet_Countries.Controllers
                 "There are too people named 'Antonio' in Italy.",
                 new string[] { "Red", "White", "Green" }
                 ));
-        }
 
-        public IActionResult Index()
-        {
-            return View();
+            return View(Countries);
         }
 
         public IActionResult Privacy()
         {
             return View();
-        }
-
-        [HttpPost]
-        public IActionResult SetCountry(string country)
-        {
-
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
